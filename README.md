@@ -1,14 +1,14 @@
 Web Crawler
               This is a Java Spring Boot application that crawls web pages and logs the URLs that have been visited. In order to parse HTML, the application uses the Jsoup library and the Spring Boot framework to build the web page.
 Installation
-Clone this repository to your local machine using git clone https://github.com/your-username/url-crawler.git
-Navigate to the project directory: cd url-crawler
-Build the project using Maven: mvn package
+- Clone this repository to your local machine using git clone https://github.com/lalithaGovada/webcrawler
+- Navigate to the project directory: cd url-crawler
+- Build the project using Maven: mvn package
 Usage
-Start the application by running java -jar target/url-crawler.jar
-Open your web browser and navigate to http://localhost:8080/crawlUrls?url=http://example.com, replacing http://example.com with the URL you want to start crawling from.
-The application will start crawling URLs within the same domain as the starting URL up to a depth of 3 by default. You can customize the depth by appending &depth=5 to the URL, replacing 5 with the desired depth.
-Visited URLs will be printed to the console and written to a file called "success.txt" in the project directory. Any errors encountered during crawling will be written to a file called "error.txt" in the project directory.
+- Start the application by running java -jar target/url-crawler.jar
+- Open your web browser and navigate to http://localhost:8080/crawlUrls?url=http://example.com, replacing http://example.com with the URL you want to start crawling from.
+- The application will start crawling URLs within the same domain as the starting URL up to a depth of 3 by default. You can customize the depth by appending &depth=5 to the URL, replacing 5 with the desired depth.
+- Visited URLs will be printed to the console and written to a file called "success.txt" in the project directory. Any errors encountered during crawling will be written to a file called "error.txt" in the project directory.
 Note: This application requires Java 11 or later to be installed on your machine.
 Technical information 
 The UrlCrawlerController class appears to be a Spring REST controller that defines a GET endpoint /crawlUrls that takes a query parameter url. When this endpoint is called, it invokes the startCrawling method of an instance of the CrawlerUtil class, passing the provided URL as a parameter.
